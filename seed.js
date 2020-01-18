@@ -18,11 +18,6 @@ User.find({
 }, (err, foundUser) => {
     if (foundUser.length == 0) {
         newAdmin.save();
-        Cottage.find({}, (err, foundCottage) => {
-            if (foundCottage.length == 0) {
-                newCottage.save();
-            }
-        })
     }
 })
 
